@@ -1,6 +1,5 @@
 package examen_extraordinaria;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class Examen_Extraordinaria {
                 }
 
         
-        //------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------- EMPEZAMOS MENU ---------------------------------------------------------
         
         
         //variable:
@@ -65,6 +64,7 @@ public class Examen_Extraordinaria {
                     
                 case 2:
                     // llamamos al metodo de la clase Lista para sumar la stock de cada tipo de producto:
+                    li.mostrarStockDeTipo();
                     
                     break;
                     
@@ -78,7 +78,7 @@ public class Examen_Extraordinaria {
                     Productos nuevo_producto = new Productos();
                     
                     // Llamamos al metodo de crear nueva autora de la clase autora:
-                    nuevo_producto.crearProducto();
+                    nuevo_producto.crearProducto();     // en el precio solo me dejan enteros me di cuenta tarde.
                     
                     // Añadimos en la listaProductos el producto del objeto nuevo_producto llamando al metodo de la clase Lista:
                     li.rellenar_lista(nuevo_producto);
@@ -93,7 +93,7 @@ public class Examen_Extraordinaria {
                     Scanner sc2 = new Scanner(System.in);
                     
                     try {
-                        System.out.println("Ingrese el nombre del archivo CSV: ");
+                        System.out.println("Ingrese el nombre del archivo CSV para crear: ");
                         String nombreArchivo = sc2.nextLine();
                         // metodo llamado:
                         li.guardarAutorasEnCSV(nombreArchivo);

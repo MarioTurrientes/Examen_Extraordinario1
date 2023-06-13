@@ -12,7 +12,7 @@ import java.sql.Statement;
  */
 public class DB_Manager {
     
-    //O. Para el objeto de la lista autoras:
+    //O. Para el objeto de la lista de la clase Lista:
     private Lista li;
     
     //O. Constructor con el objeto de la lista:
@@ -40,7 +40,7 @@ public class DB_Manager {
             conn = DriverManager.getConnection(url,"root","");     // establecer la conexión 
             System.out.println("Conexión exitosa a la base de datos");
             
-            // Obtener los datos de las autoras y agregarlos a la lista de Autora
+            // Obtener los datos de los productos y agregarlos a la lista de Productos en la clase Lista
             obtenerDatosProductos();
             
         
